@@ -119,7 +119,6 @@ def juego():
             tiempo_derr_enemigos = time.time()
             potenciador_derr_enemigos_x, potenciador_derr_enemigos_y = -tamaño_celda, -tamaño_celda
 
-        # Verificar si el potenciador ha expirado
         if derr_enemigos and time.time() - tiempo_derr_enemigos > 10:
             derr_enemigos = False
             while True:
