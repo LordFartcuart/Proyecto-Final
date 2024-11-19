@@ -122,11 +122,9 @@ def juego():
         # Verificar si el potenciador ha expirado
         if derr_enemigos and time.time() - tiempo_derr_enemigos > 10:
             derr_enemigos = False
-            # Hacer que el potenciador reaparezca en una posición aleatoria
             while True:
                 potenciador_derr_enemigos_x = round(random.randrange(0, ANCHO - tamaño_celda) / tamaño_celda) * tamaño_celda
                 potenciador_derr_enemigos_y = round(random.randrange(0, ALTO - tamaño_celda) / tamaño_celda) * tamaño_celda
-                # Asegurarse de que el potenciador no reaparezca dentro de la serpiente o en un enemigo
                 if [potenciador_derr_enemigos_x, potenciador_derr_enemigos_y] not in snake_list and \
                     (potenciador_derr_enemigos_x, potenciador_derr_enemigos_y) != (enemigo_x, enemigo_y):
                     break
@@ -138,5 +136,4 @@ def juego():
     pygame.quit()
     quit()
 
-# Ejecutar el juego
 juego()
